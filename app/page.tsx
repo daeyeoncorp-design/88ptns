@@ -1,50 +1,32 @@
 "use client";
 
-import { Container, Title, Text, Button, Group, Stack } from "@mantine/core";
+import { Box, Container, Title, Text, Button, Group, Stack } from "@mantine/core";
+import { Header } from "@/components/layout/Header";
+import { Hero } from "@/components/home/Hero";
 
 export default function Home() {
   return (
-    <Container size="lg" py="xl">
-      <Stack gap="xl">
-        <Group justify="space-between" align="center">
-          <Title order={3}>88 PARTNERS</Title>
-          <Button variant="light">Contact</Button>
-        </Group>
+    <Box>
+      <Header />
+      <Hero />
 
-        <div style={{
-          height: 400,
-          background: 'var(--mantine-color-blue-filled)',
-          borderRadius: 'var(--mantine-radius-md)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          color: 'white'
-        }}>
-          <Title>Main Visualization Area</Title>
-        </div>
+      {/* Placeholder Content to allow scrolling for header test */}
+      <Container size="lg" py={100}>
+        <Stack gap="xl">
+          <Title order={2} ta="center" mt={50}>Creating Value Beyond Limits</Title>
+          <Text ta="center" maw={800} mx="auto" c="dimmed">
+            88 Partners is dedicated to fostering innovation and driving growth.
+            We partner with visionaries to build the future.
+          </Text>
 
-        <Title order={2} mt="xl">About U</Title>
-        <Text>
-          여기는 88 Partners의 메인 페이지입니다.
-          관리자 또는 허가된 사용자만 볼 수 있는 페이지입니다.
-        </Text>
-
-        <Title order={2} mt="xl">Services</Title>
-        <Group>
-          <div style={{ flex: 1, padding: 20, border: '1px solid #eee', borderRadius: 8 }}>
-            <Title order={4}>Service 1</Title>
-            <Text size="sm" mt="sm">Description of service 1.</Text>
-          </div>
-          <div style={{ flex: 1, padding: 20, border: '1px solid #eee', borderRadius: 8 }}>
-            <Title order={4}>Service 2</Title>
-            <Text size="sm" mt="sm">Description of service 2.</Text>
-          </div>
-          <div style={{ flex: 1, padding: 20, border: '1px solid #eee', borderRadius: 8 }}>
-            <Title order={4}>Service 3</Title>
-            <Text size="sm" mt="sm">Description of service 3.</Text>
-          </div>
-        </Group>
-      </Stack>
-    </Container>
+          <Group justify="center" mt="xl">
+            <div style={{ width: '100%', height: 500, background: '#f8f9fa', borderRadius: 16 }}></div>
+          </Group>
+          <Group justify="center" mt="md">
+            <div style={{ width: '100%', height: 500, background: '#f1f3f5', borderRadius: 16 }}></div>
+          </Group>
+        </Stack>
+      </Container>
+    </Box>
   );
 }
